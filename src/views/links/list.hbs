@@ -1,0 +1,57 @@
+<!-- Carousel -->
+<div id="carouselExampleAutoplaying" class="carousel slide accordion-container" data-bs-ride="carousel">
+  <div class="carousel-inner accordion-slider">
+    <div class="carousel-item accordion-item active">
+      <img src="assets/Huawei.jpeg" alt="Telefono" class="d-block w-100">
+    </div>
+    <div class="carousel-item accordion-item">
+      <img src="assets/image.png" alt="Telefono" class="d-block w-100">
+    </div>
+    <div class="carousel-item accordion-item">
+      <img src="assets/imagnew.png" alt="Telefono" class="d-block w-100">
+    </div>
+    <div class="carousel-item accordion-item">
+      <img src="assets/iphon.jpeg" alt="Telefono" class="d-block w-100">
+    </div>
+    <div class="carousel-item accordion-item">
+      <img src="assets/vivo2.jpg" alt="Telefono" class="d-block w-100">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container cards-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Escoge el tuyo</h2>
+      <a href="/links/add" class="btn btn-primary">Agregar Smartphone</a>
+    </div>
+  
+
+  <div class="row cards-list">
+    {{#each newsmartphone}}
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          {{#if imagen}}
+            <img src="./uploads/{{imagen}}" alt="{{nombre}}" class="card-img-top">
+          {{/if}}
+          <div class="card-body">
+            <h5 class="card-title">{{nombre}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{serie}}</h6>
+            <p class="card-text card-price">{{precio}}</p>
+            <p class="card-text">{{descripcion}}</p>
+            <p>{{timeago created_at}}</p>
+            <a href="/links/delete/{{id}}" class="btn btn-danger">Eliminar</a>
+            <a href="/links/edit/{{id}}" class="btn btn-secondary">Editar</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

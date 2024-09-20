@@ -1,0 +1,145 @@
+body {
+    background-color: #f5f6f5;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.index {
+    width: 100vw;
+    height: 100vh;
+}
+
+.masthead {
+    color: white;
+    min-height: 30rem;
+    width: 100%;
+    padding-top: 8rem;
+    background: url("/img/image.png") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.masthead h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .masthead {
+        padding-top: 4rem;
+        min-height: 20rem;
+    }
+
+    .index {
+        height: auto;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas, como móviles */
+@media (max-width: 576px) {
+    .masthead {
+        padding-top: 2rem;
+        min-height: 15rem;
+        background-position: top center;
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: black;
+}
+
+.accordion-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.accordion-slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+
+}
+
+.accordion-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.accordion-item img {
+    width: 100%;
+    height: 50vh;
+    object-fit: scale-down;
+}
+
+/* cards */
+.cards-container {
+    /* display: flex; */
+    flex-wrap: wrap;
+}
+
+.cards-list {
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    /* Ajusta según la altura deseada para las imágenes */
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    margin-top: 10px;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+.card-body .btn {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .cards-list .col-md-4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-list .card {
+        flex: 1;
+    }
+}
